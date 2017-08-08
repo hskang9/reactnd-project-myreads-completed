@@ -1,3 +1,6 @@
 node_modules
 yarn.lock
 .DS_Store
+.idea/
+.idea/codeStyleSettings.xml
+package-lock.json
