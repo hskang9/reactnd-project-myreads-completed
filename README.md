@@ -1,4 +1,42 @@
-This is the starter template for the final assessment project for Udacity's React Fundamentals course, developed by [React Training](https://reacttraining.com). The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+MyBookShelf is my first React project.
+Thanks Udacity team and Ract course mentors for great course 
+https://www.udacity.com/course/react-nanodegree--nd019
+
+## Instalation instructions:
+
+1. Clone from GitHub 
+```
+git clone https://github.com/AlexVegner/reactnd-project-myreads-completed.git
+```
+
+2. Open app folder
+```
+cd reactnd-project-myreads-completed
+```
+
+4. Install node packages 
+```
+npm install
+```
+
+5. Start react app 
+```
+npm start
+```
+
+6. Open in browser 
+```
+open http://localhost:3000
+```
+
+Note: 
+You can use run it with one command sequence (Tested on OSX)
+```
+git clone https://github.com/AlexVegner/reactnd-project-myreads-completed.git && cd reactnd-project-myreads-completed && npm install && npm start
+```
+ 
+
+ - This is the starter template for the final assessment project for Udacity's React Fundamentals course, developed by [React Training](https://reacttraining.com). The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
 
 Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
 
