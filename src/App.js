@@ -21,16 +21,27 @@ class BooksApp extends React.Component {
   }
 
   changeBookShelf = (book, shelf) => {
-    this.setState((prevState) => {
-      let books = prevState.books.filter((b) => !(b.id === book.id))
-      if (shelf !== 'none') {
-        books.push({...book, shelf: shelf})
-      }
-      return {books: books}
-    });
-    BooksAPI.update(book, shelf).catch((reason) => {
-      this.getAll()
-    });
+    const oldShelf = book.shelf
+    if (oldShelf !== shelf) {
+      this.setState((prevState) => {
+        let books = prevState.books.filter((b) => !(b.id === book.id))
+        if (shelf !== 'none') {
+          books.push({...book, shelf: shelf})
+        }
+        return {books: books}
+      })
+      BooksAPI.update(book, shelf).catch((reason) => {
+        // Handle sync error 
+        // Rollback changes 
+        this.setState((prevState) => {
+          let books = prevState.books.filter((b) => !(b.id === book.id))
+          if (shelf !== 'none') {
+            books.push({...book, shelf: oldShelf})
+          }
+          return {books: books}
+        })
+      })
+    }
   }
 
   render() {
