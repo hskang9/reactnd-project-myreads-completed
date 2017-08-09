@@ -19,17 +19,18 @@ class SearchPage extends Component {
 
   updateQuery = (query) => {
     let queryValue = query.trim()
-    if (queryValue.length > 1) {
-      this.searchQuery(queryValue)
-      this.setState({
-        query: queryValue,
-        books: []
-      })
-    } else {
-      this.setState({
-        query: queryValue,
-        books: []
-      })
+    if (this.state.query !== query) {
+      if (queryValue.length > 1) {
+        this.searchQuery(queryValue)
+        this.setState({
+          query: queryValue
+        })
+      } else {
+        this.setState({
+          query: queryValue,
+          books: []
+        })
+      }
     }
   }
 
